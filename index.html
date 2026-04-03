@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bagisto API</title>
+</head>
+
+<body>
+
+<h1 style="color:red;">
+NguyenHuyHoang - MSSV: 123456
+</h1>
+
+<div id="list"></div>
+
+<script>
+
+// Gọi API Bagisto
+fetch("http://127.0.0.1:8000/api/products")
+.then(res => res.json())
+.then(data => {
+
+    // Console log bắt buộc
+    console.log("Bài làm của: NguyenHuyHoang");
+
+    let products = data.data;
+    let container = document.getElementById("list");
+
+    products.forEach(p => {
+        let div = document.createElement("div");
+
+        div.innerHTML = `
+            <h3>${p.name}</h3>
+            <p>Giá: ${p.price}</p>
+            <button>Chi tiết</button>
+            <hr>
+        `;
+
+        container.appendChild(div);
+    });
+
+});
+
+</script>
+
+</body>
+</html> 
