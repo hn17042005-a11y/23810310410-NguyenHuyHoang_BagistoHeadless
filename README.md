@@ -2,7 +2,7 @@
 
 ## Thông tin sinh viên
 - Họ tên: Nguyen Huy Hoang
-- MSSV: XXXXX
+- MSSV: 23810310410
 
 ## Mô tả
 Dự án sử dụng Bagisto để xây dựng hệ thống Headless Commerce.
